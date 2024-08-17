@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.sec1{
+    background-image: url(./image/college\ \(1\).jpg);
+    background-size: cover;
+    background-position: center;
+   margin: 0;
+   padding: 0;
+}
+.sec11{
+    background-image: url(./image/NOSPROGRAMME.jpg);
+    background-size: cover;
+    background-position: center;
+   margin: 0;
+   padding: 0;
+   height: 70vh;
+}
+.sec12{
+    background-image: url(./image/ServicePage.jpg);
+    background-size: cover;
+    background-position: center;
+   margin: 0;
+   padding: 0;
+}
+section{
+    padding: 0;
+    margin: 0;
+}
+.menu{
+    size: cover;
+    position: center;
+    width: 5vh;
+    height: 5vh;
+}
+.nav-item:hover{
+    background: rgb(198, 187, 180)
+}
+.ca{
+    margin-right:1vh;
+    margin-bottom: 3vh;
+} 
+.caa{
+   
+    margin-bottom: 3vh;
+} 
+.vas{
+    width: 18%;
+}
+.center{
+    text-align: center;
+}
+.moins{
+    margin-bottom: 3vh;
+    width: 49%;
+}
+.long{
+    margin-right: 1.5vh;
+}
+.bordure{
+    border-radius: 6vh;
+    height: 100%;
+}
+.bordure img{
+    height: 130vh;
+    width: 55%;
+    border-radius: 25vh 0 0 20vh ;  
+}
+.moin{
+    margin-bottom: 3vh;
+    width: 23.5%;
+}
+.w{
+    width: 10%;
+    text-decoration: none;
+    color: beige;
+}
+.r:hover{
+    color: rgb(236, 31, 16);
+}
+.b:hover{
+    color: rgb(44, 183, 243);
+}
+.ima2{
+    width: 41px;
+    height: 31px;
+    
+}
+.ima{
+    justify-content: center;
+}
+.wi{
+    width: 47%;
+}
+.card{
+    width: 12vh;
+}
+.carte1{
+    background-image: url(./image/aavion9.jpg);
+    background-size: cover ;
+    background-position: center;
+}
+.carte2{
+    background-image: url(./image/carrou4.jpg);
+    background-size: cover ;
+    background-position: center;
+}
+.carte{
+    
+    background-size: cover ;
+    background-position: center;
+}
+.azla{
+    background-image: url(./image/vie_etudiant.jpg);
+    background-size: cover ;
+    background-position: center;
+}
+.a1{
+    background-image: url(./image/macanique\ \(5\).jpg);
+}
+.a2{
+background-image: url(./image/Droits\ \(4\).jpg);
+}
+.a3{
+background-image: url(./image/couture\ \(2\).jpg);
+}
+
+

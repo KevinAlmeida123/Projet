@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+</head>
+<style>
+    .card{
+        margin: 15%;
+        width: 35%;
+        
+    }
+    
+    /* Style pour centrer la barre de progression */
+    .progress-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 600px;
+        text-align: center;
+        background: #f8f9fa; /* Optionnel : ajouter un fond pour plus de visibilité */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optionnel : ajouter une ombre pour plus de profondeur */
+    }
+
+
+</style>
+<body>
+  <section id="le" class="d">
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h1>Postuler pour un emploi</h1>
+            </div>
+            <div class="card-body">
+                <form id="applicationForm">
+                    <div class="row g-3 justify-content-center mb-4">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">Prénom</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-3 justify-content-center mb-4">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group text-center">
+                                <label for="email" class="form-label">Adresse email</label>
+                                <input type="email" class="form-control" id="email" style="text-align: center;" required>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group text-center">
+                                <label for="phone" class="form-label">Numéro de téléphone</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4 text-center">
+                        <label for="position" class="form-label">Poste désiré</label> 
+                        <select id="position" class="form-select d-inline-block w-100">
+                            <option selected>Choisir...</option>
+                            <option>Développeur Web</option>
+                            <option>Designer UX/UI</option>
+                            <option>Responsable Marketing</option>
+                            <option>Chargé de Ressources Humaines</option>
+                        </select>
+                    </div>
+                    <div class="mb-4 text-center">
+                        <label for="resume" class="form-label">CV (PDF uniquement)</label>
+                        <input class="form-control d-inline-block w-100" type="file" id="resume" accept=".pdf" onchange="previewPDF()">
+                        <div class="mt-2" id="pdfPreviewContainer" style="display: none;">
+                            <h5>Prévisualiser le CV :</h5>
+                            <iframe id="pdfPreview" style="width: 100%; height: 500px; border: none;"></iframe>
+                        </div>
+                    </div>
+                    <div class="mb-4 text-center">
+                        <label for="coverLetter" class="form-label">Lettre de motivation</label>
+                        <textarea class="form-control w-100" id="coverLetter" rows="4"></textarea>
+                    </div>
+                    <div class="mb-4 form-check text-center">
+                        <input type="checkbox" class="form-check-input" id="privacyPolicy" required>
+                        <label class="form-check-label" for="privacyPolicy">J'accepte la politique de confidentialité</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 ae" id="je">Envoyer</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+   
+    <div class="progress-container d-none " >
+  <div class="progress">
+    <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+      0%
+    </div>
+  </div>
+</div>
+
+<script>
+    var a =document.getElementById('je')
+    var ba = document.querySelector('body')
+        a.onclick=function(){
+              document.querySelector('.d-none').className='d-block'
+              document.querySelector('.d').className='d-none'
+               document.querySelector('.ae').className='d-none'
+              progress = 0;
+              const progressInterval = setInterval(updateProgress, 500);
+          }
+    let progress = 0;
+    const progressBar = document.getElementById('progress-bar');
+    function updateProgress() {
+      progress += 5;
+      if (progress > 100) {
+        progress = 100;
+      }
+      progressBar.style.width = progress + '%';
+      progressBar.setAttribute('aria-valuenow', progress);
+      progressBar.textContent = progress + '%';
+      if(progress >= 99){
+        ba.innerHTML=''
+        ba.innerHTML='<div class="card" style="width: 18rem;text-align:center"><img src="./image/carrou3.jpg" class="card-img-top" alt="..."><h1>Votre Formulaire à été recu avec Succès</h1></div>'
+        setTimeout(
+        function ye(){
+            window.location.href = 'Acceuil.html';
+        },3000)
+        
+      }
+      if (progress === 100) {
+        clearInterval(progressInterval);
+        
+      }
+    }
+    
+  </script>
+    
+  
+</body>
+</html>
